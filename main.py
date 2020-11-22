@@ -12,6 +12,10 @@ from consolemenu.items import *
 import subprocess
 import time
 
+
+# This script needs to be executet with ROOT user!!! (Changing sys config files content (for ipv4 forwarding),
+# changing wireless interface card mode,....)
+
 inf_name = ""
 global ascii_art 
 ascii_art = """   _____      
@@ -28,8 +32,7 @@ def run_command(command, print_out=True):
     output = process.communicate()[0].strip()
     if print_out:
         print(output.decode("utf-8"))
-
-    time.sleep(2)
+    time.sleep(1)
 
 def enable_monitor_mode():
     global inf_name
@@ -60,12 +63,15 @@ def rename_interface():
     global inf_name
     print(f"Selected wireless interface card is:{inf_name}")
     new_name = input("Enter a new name for wireless interface card (default:wlan0):")
-    run_command("nmcli radio wifi off")
+    run_command("sudo nmcli radio wifi off")
     run_command(f"sudo ip link set {inf_name} name {new_name}")
-    run_command("nmcli radio wifi on")
+    run_command("sudo nmcli radio wifi on")
 
     inf_name = new_name
     print(f"New wireless interface card name is:{inf_name}")
+    
+def call_sniffer():
+    start_sniffing(inf_name)
 
 if __name__ == "__main__":
 
@@ -81,7 +87,7 @@ if __name__ == "__main__":
 
     disable_monitor_mode_item = FunctionItem("Disable monitor mode on selected interface", disable_monitor_mode)
 
-    sniffing_item = FunctionItem("Start sniffing probe requests", start_sniffing)
+    sniffing_item = FunctionItem("Start sniffing probe requests", call_sniffer)
 
     evil_twin_item = FunctionItem("Create Evil-Twin AP", create_AP, ["Google Starbucks"])
 
