@@ -48,7 +48,7 @@ def PacketHandler(packet):
         if (packet.type == 0 or packet.type == 2) and (packet.subtype == 4 or packet.subtype ==12):
             sn = str(packet.getlayer(Dot11).addr2).upper()            
             if hasattr(packet, 'info'):
-                print("Acces point MAC: %s with dBm: %s SSID: %s " %(manf(sn), packet.dBm_AntSignal, packet.info))
+                print("Device with MAC: %s with dBm: %s SSID: %s " %(manf(sn), packet.dBm_AntSignal, packet.info))
             else:
-                print("Acces point MAC: %s with dBm: %s " %(manf(sn), packet.dBm_AntSignal))
+                print("Device with MAC: %s with dBm: %s " %(manf(sn), packet.dBm_AntSignal))
                 

@@ -34,8 +34,10 @@ def create_AP(ssid):
     Popen("sudo gnome-terminal -x "+ dnsmasq_command, stdout=PIPE, stderr=PIPE, stdin=PIPE, shell=True)
     time.sleep(3)
     
+    # WARNING - if AP will not have internet run following command manually with sudo rights! 
+    # sudo echo 1 > /proc/sys/net/ipv4/ip_forward"
     print(f"Creating NAT to forward traffic from eth0 -> wlan0mon\n")    
-    ipv4_forward_command = "sudo echo 1 > /proc/sys/net/ipv4/ip_forward"
+    ipv4_forward_command = "echo 1 > /proc/sys/net/ipv4/ip_forward"
     Popen("sudo gnome-terminal -x "+ ipv4_forward_command, stdout=PIPE, stderr=PIPE, stdin=PIPE, shell=True)
     time.sleep(3)
     input("Continue [Enter]...")
