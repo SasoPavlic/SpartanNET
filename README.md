@@ -1,9 +1,9 @@
-**Requirements
+# Requirements
 
-# TO INSTALL ALL
+## INSTALL ALL
 pip3 install -r requirements.txt
 
-# MANUAL INSTALL
+## MANUAL INSTALL
 pip install console-menu
 pip install menu
 pip install scapy
