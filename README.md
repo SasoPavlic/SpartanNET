@@ -1,4 +1,5 @@
-## Description 📝
+# SpartanNET
+### Description 📝
 Automated Wi-Fi vulnerabilities exploiter written in Python language for beginners.
 It tries to reduce needed knowledge about penetration testing to a bare minimum **(Plug&Select&Play)**.
 ### What it can do? 👀
@@ -9,7 +10,7 @@ It tries to reduce needed knowledge about penetration testing to a bare minimum 
 NOTE: If AP will note have internet access try to execute:
 `echo 1 > /proc/sys/net/ipv4/ip_forward`
 * **Capture WPA2 handshake** (de-Auth clients on selected Wi-Fi AP, capturing handshake, outputs **handshake.cap** file for leter usage with Hashcat) 
-# Requirements ✅
+### Requirements ✅
 Anaconda enviroment with Python 3.7.x (To run SpartanNET script (main.py) a.k.a. console menu)
 ##### INSTALL ALL
 pip3 install -r requirements.txt
@@ -23,3 +24,4 @@ pip3 install -r requirements.txt
 ### Documentation 📘 
 * Faculty paper written in Slovenian language (you can still translate it to English and figure out a lot of things 😏)
 [Google Docs link](https://docs.google.com/document/d/1uIwj4-HJyQNUju9b_4l_-atU1H54xv4_uDSFtwpmb2o/edit?usp=sharing)
+
