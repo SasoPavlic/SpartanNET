@@ -11,7 +11,8 @@ NOTE: If AP will note have internet access try to execute:
 `echo 1 > /proc/sys/net/ipv4/ip_forward`
 * **Capture WPA2 handshake** (de-Auth clients on selected Wi-Fi AP, capturing handshake, outputs **handshake.cap** file for leter usage with Hashcat) 
 ### Requirements ✅
-Anaconda enviroment with Python 3.7.x (To run SpartanNET script (main.py) a.k.a. console menu)
+* **Anaconda** enviroment with Python 3.7.x (To run SpartanNET script (main.py) a.k.a. console menu)
+* **Kali Linux** OS (full package)
 ##### INSTALL ALL
 pip3 install -r requirements.txt
 ##### MANUAL INSTALL
