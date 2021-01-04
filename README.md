@@ -28,6 +28,7 @@ pip3 install -r requirements.txt
 [Google Docs link](https://docs.google.com/document/d/1uIwj4-HJyQNUju9b_4l_-atU1H54xv4_uDSFtwpmb2o/edit?usp=sharing)
 ### Usage 🔨
 `conda activate ENVIROMENT_NAME`
+
 `python main.py`
 ### Disclaimer NOTE ⚠️
 **SpartanNET** should be used for authorized penetration testing and/or nonprofit educational purposes only. Any misuse of this software will not be the responsibility of the author or of any other collaborator. Use it at your own networks and/or with the network owner's permission.
